@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Evelyn's photobooth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="intro-on">
+    <!-- loading screen: typing machine -->
+
+    <div class="intro" id="intro" aria-live="polite">
+      <div class="machine">
+        <div class="feed">
+          <div class="sheet-in">
+            <div class="sheet-head">
+              <span>evelyn</span> <span>portfolio</span>
+            </div>
+            <div class="typed" id="typed"></div>
+          </div>
+        </div>
+        <div class="carriage">
+          <i class="knob-l"></i>
+          <i class="knob-r"></i>
+        </div>
+        <div class="body">
+          <div class="typebars"></div>
+          <div class="brand">evelyn</div>
+          <div class="keys" id="keys"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main page -->
+    <div class="site">
+      <div class="clip">
+        <img src="images/clip.png" alt="Gold clip" />
+        <h1>
+          evelyn's<br />
+          photobooth
+        </h1>
+      </div>
+      <nav class="strip" aria-label="Sections">
+        <p class="hint">★ tap a photo to open secrets ★</p>
+        <button class="frame" data-open="about">
+          <img src="images/about.JPG" alt="About me" />
+          <span>about me 🤍</span>
+        </button>
+        <button class="frame" data-open="resume">
+          <img src="images/resume.png" alt="Resume" />
+
+          <span>resume</span>
+        </button>
+        <button class="frame" data-open="projects">
+          <img src="images/projects.JPG" alt="Projects" />
+          <span>projects</span>
+        </button>
+        <button class="frame" data-open="contact">
+          <img src="images/contact.JPG" alt="Contact" />
+          <span>contact</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- about me section -->
+    <div class="viewer" id="viewer" hidden>
+      <article
+        class="page"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="page-title"
+        tabindex="-1"
+      >
+        <div class="page-head">
+          <span>evelyn nguyen</span><span id="page-title">about me</span
+          ><button class="close" id="close" aria-label="Close">close ✕</button>
+        </div>
+
+        <section class="panel" id="about" data-title="about me">
+          <div class="about">
+            <div class="photo">
+              <img src="images/me.jpg" alt="Evelyn Nguyen" />
+            </div>
+            <div>
+              <h2 data-type="Xin chào, my name is Evelyn Nguyen"></h2>
+              <p>
+                I am a Computer Science student with a growing interest in
+                full-stack development and machine learning. I enjoy building
+                projects that are practical and thoughtful, while still bringing
+                a little bit of my personality into everything I create. Always
+                and always eager to learn new technologies and improve my skills
+                🐾
+              </p>
+              <p>
+                Outside of tech, I’m a girly girl at heart who loves fashion,
+                shopping, films, and yapping with friends. When I’m not coding,
+                I’m usually on some kind of side quest. I love being outdoors,
+                especially hiking, and I’m always picking up little hobbies like
+                photography. When I want something more low-key, you’ll probably
+                find me solving a Sudoku puzzle.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- resume section -->
+        <section class="panel" id="resume" data-title="resume" hidden>
+          <h2 data-type="resume"></h2>
+
+          <a
+            class="resume-sheet"
+            href="files/Evelyn Nguyen_Software Engineer Internship 2027.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="files/resume.png" alt="Evelyn Nguyen's resume" />
+          </a>
+
+          <a
+            class="resume-download"
+            href="files/Evelyn Nguyen_Software Engineer Internship 2027.pdf"
+            download
+          >
+            ♥︎ download resume ♥︎
+          </a>
+        </section>
+
+        <!-- projects section -->
+
+        <section class="panel" id="projects" data-title="projects" hidden>
+          <h2 data-type="projects"></h2>
+
+          <div class="block">
+            <h3>TriMet BreadCrumb Data Pipeline</h3>
+            <a
+              class="gh-btn"
+              href="https://github.com/minomeow12/trimet-streaming-data-pipeline"
+              target="_blank"
+              rel="noopener"
+            >
+              view on GitHub ↗
+            </a>
+
+            <p>
+              A cloud-based data pipeline that collects, validates, transforms,
+              stores, and visualizes TriMet bus GPS and stop-event data using
+              Google Cloud Platform and PostgreSQL.
+            </p>
+
+            <div class="tags">
+              <span>Python</span>
+              <span>Google Cloud</span>
+              <span>Pub/Sub</span>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+
+          <hr class="rule" />
+
+          <div class="block">
+            <h3>meowclub - Chat App</h3>
+            <a
+              class="gh-btn"
+              href="https://github.com/minomeow12/coffee-chat-app"
+              target="_blank"
+              rel="noopener"
+            >
+              view on GitHub ↗
+            </a>
+            <p>
+              A React chat application for sending instant messages through a
+              clean, coffee-inspired interface.
+            </p>
+            <div class="tags">
+              <span>React</span><span>JavaScript</span><span>API</span
+              ><span>CSS</span><span>HTML</span>
+            </div>
+          </div>
+          <hr class="rule" />
+
+          <div class="block">
+            <h3>Social Media Analytics</h3>
+            <a
+              class="gh-btn"
+              href="https://github.com/minomeow12/cs302-prog4-5-social-media-analytics"
+              target="_blank"
+              rel="noopener"
+            >
+              view on GitHub ↗
+            </a>
+            <p>
+              A data structures project that uses tree-based organization to
+              analyze user behavior across three social media platforms:
+              Instagram, Facebook, and TikTok.
+            </p>
+            <div class="tags"><span>Python</span></div>
+          </div>
+        </section>
+
+        <!-- contact section -->
+
+        <section class="panel" id="contact" data-title="contact" hidden>
+          <h2 data-type="Glad you stopped by!"></h2>
+          <p>Happy to chat about anything you saw here. Enjoy your day!</p>
+          <p>
+            <a class="btn" href="mailto:evelynmk03@gmail.com">email me</a
+            ><a class="btn" href="https://linkedin.com/in/evelynng270304"
+              >LinkedIn</a
+            ><a class="btn" href="https://github.com/minomeow12">GitHub</a>
+          </p>
+        </section>
+        <div class="page-nav">
+          <button class="btn" id="prev">‹ previous photo</button>
+          <button class="btn" id="next">next photo ›</button>
+        </div>
+      </article>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
