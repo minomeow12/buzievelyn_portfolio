@@ -335,11 +335,11 @@ body.intro-on {
 
   background: #141312;
 
-  padding: 34px 12px 12px;
+  padding: 30px 6px 6px;
 
   display: grid;
 
-  gap: 12px;
+  gap: 8px;
 
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.28),
@@ -675,9 +675,5 @@ body.intro-on {
 
   .photo {
     max-width: 200px;
-  }
-
-  #resume iframe {
-    height: 70vh;
   }
 }
