@@ -85,11 +85,11 @@
       }
 
       // Pause between lines
-      await wait(200);
+      await wait(150);
     }
 
     // Pause before leaving intro
-    await wait(250);
+    await wait(150);
 
     finish();
   }
