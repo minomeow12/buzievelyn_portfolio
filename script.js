@@ -78,18 +78,18 @@
 
         // Wait before typing next character
         if (character === ".") {
-          await wait(150);
+          await wait(80);
         } else {
-          await wait(35 + Math.random() * 35);
+          await wait(25 + Math.random() * 25);
         }
       }
 
       // Pause between lines
-      await wait(250);
+      await wait(200);
     }
 
     // Pause before leaving intro
-    await wait(350);
+    await wait(250);
 
     finish();
   }
